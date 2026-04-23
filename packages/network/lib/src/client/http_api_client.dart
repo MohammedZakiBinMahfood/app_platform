@@ -13,12 +13,14 @@ class HttpApiClient implements ApiClient {
   final http.Client client;
   final TokenProvider tokenProvider;
   final Duration timeout;
+  Map<String, String>? headers;
 
   HttpApiClient({
     required this.baseUrl,
     required this.client,
     required this.tokenProvider,
     this.timeout = const Duration(seconds: 30),
+    this.headers
   });
 
   // =====================================================
@@ -29,6 +31,7 @@ class HttpApiClient implements ApiClient {
   Future<Result<T>> get<T>(
       String path, {
         Map<String, dynamic>? query,
+        Map<String, String>? headers,
         required JsonParser<T> parser,
       }) {
     final uri = Uri.parse('$baseUrl$path')
@@ -36,6 +39,7 @@ class HttpApiClient implements ApiClient {
 
     return _request(
       method: _HttpMethod.get,
+      headers: headers,
       uri: uri,
       parser: parser,
     );
@@ -50,6 +54,7 @@ class HttpApiClient implements ApiClient {
       String path, {
         Map<String, dynamic>? body,
         Map<String, dynamic>? query,
+        Map<String, String>? headers,
         required JsonParser<T> parser,
       }) {
     final uri = Uri.parse('$baseUrl$path')
@@ -57,6 +62,7 @@ class HttpApiClient implements ApiClient {
 
     return _request(
       method: _HttpMethod.post,
+      headers: headers,
       uri: uri,
       body: body,
       parser: parser,
@@ -71,12 +77,14 @@ class HttpApiClient implements ApiClient {
   Future<Result<T>> put<T>(
       String path, {
         Map<String, dynamic>? body,
+        Map<String, String>? headers,
         required JsonParser<T> parser,
       }) {
     final uri = Uri.parse('$baseUrl$path');
 
     return _request(
       method: _HttpMethod.put,
+      headers: headers,
       uri: uri,
       body: body,
       parser: parser,
@@ -91,12 +99,14 @@ class HttpApiClient implements ApiClient {
   Future<Result<T>> patch<T>(
       String path, {
         Map<String, dynamic>? body,
+        Map<String, String>? headers,
         required JsonParser<T> parser,
       }) {
     final uri = Uri.parse('$baseUrl$path');
 
     return _request(
       method: _HttpMethod.patch,
+      headers: headers,
       uri: uri,
       body: body,
       parser: parser,
@@ -111,11 +121,13 @@ class HttpApiClient implements ApiClient {
   Future<Result<T>> delete<T>(
       String path, {
         required JsonParser<T> parser,
+        Map<String, String>? headers,
       }) {
     final uri = Uri.parse('$baseUrl$path');
 
     return _request(
       method: _HttpMethod.delete,
+      headers: headers,
       uri: uri,
       parser: parser,
     );
@@ -129,15 +141,17 @@ class HttpApiClient implements ApiClient {
     required _HttpMethod method,
     required Uri uri,
     Map<String, dynamic>? body,
+    Map<String, String>? headers,
     required JsonParser<T> parser,
   }) async {
     try {
       final token = await tokenProvider.getToken();
 
-      final headers = {
+      final finalHeaders = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         if (token != null) 'Authorization': 'Bearer $token',
+        if (headers != null) ...headers,
       };
 
       http.Response response;
@@ -147,29 +161,29 @@ class HttpApiClient implements ApiClient {
           case _HttpMethod.post:
             return client.post(
               uri,
-              headers: headers,
+              headers: finalHeaders,
               body: body != null ? jsonEncode(body) : null,
             );
 
           case _HttpMethod.put:
             return client.put(
               uri,
-              headers: headers,
+              headers: finalHeaders,
               body: body != null ? jsonEncode(body) : null,
             );
 
           case _HttpMethod.patch:
             return client.patch(
               uri,
-              headers: headers,
+              headers: finalHeaders,
               body: body != null ? jsonEncode(body) : null,
             );
 
           case _HttpMethod.delete:
-            return client.delete(uri, headers: headers);
+            return client.delete(uri, headers: finalHeaders);
 
           case _HttpMethod.get:
-            return client.get(uri, headers: headers);
+            return client.get(uri, headers: finalHeaders);
         }
       }
 
