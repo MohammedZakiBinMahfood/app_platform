@@ -2,7 +2,7 @@ import 'validator_type.dart';
 
 class Validators {
   static Validator required({
-    String message = 'Required',
+    String message = 'حقل مطلوب',
   }) {
     return (value) {
       final v = (value as String?)?.trim() ?? '';
