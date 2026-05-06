@@ -118,10 +118,30 @@ abstract class ValidationController<K extends Enum>
     );
   }
 
-  void validateAll() {
+  bool validateAll() {
+
+    bool valid = true;
+
     for (final field in _validators.keys) {
-      validate(field);
+
+      final current = state.field(field);
+
+      final error = validateField(field);
+
+      if (error != null) {
+        valid = false;
+      }
+
+      state = state.updateField(
+        field,
+        current.copyWith(
+          error: error,
+          touched: true,
+        ),
+      );
     }
+
+    return valid;
   }
 
   bool validateStep(List<K> fields) {
