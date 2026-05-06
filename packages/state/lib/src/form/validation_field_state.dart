@@ -12,15 +12,18 @@ class ValidationFieldState {
   bool get isValid => error == null;
 
   ValidationFieldState copyWith({
-    String? error,
+    Object? error = _unset,
     bool? touched,
     bool? validating,
-    bool clearError = false,
   }) {
     return ValidationFieldState(
-      error: clearError ? null : error ?? this.error,
+      error: error == _unset
+          ? this.error
+          : error as String?,
       touched: touched ?? this.touched,
       validating: validating ?? this.validating,
     );
   }
 }
+
+const _unset = Object();
