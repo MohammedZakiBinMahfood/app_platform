@@ -141,4 +141,23 @@ abstract class ValidationController<K extends Enum>
   void reset() {
     state = FormValidationState<K>();
   }
+
+  void setFieldValidation(
+      K field, {
+        String? error,
+        bool touched = true,
+        bool validating = false,
+      }) {
+
+    final current = state.field(field);
+
+    state = state.updateField(
+      field,
+      current.copyWith(
+        error: error,
+        touched: touched,
+        validating: validating,
+      ),
+    );
+  }
 }
