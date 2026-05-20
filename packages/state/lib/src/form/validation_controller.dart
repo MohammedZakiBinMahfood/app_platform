@@ -180,4 +180,21 @@ abstract class ValidationController<K extends Enum>
       ),
     );
   }
+
+  String? requiredStringValidator(String? value, {String? customMessage}) {
+    if (value == null || value.trim().isEmpty) {
+      return customMessage ?? 'حقل إجباري';
+    }
+    return null;
+  }
+
+  String? requiredObjectValidator(Object? value, {String? customMessage}) {
+    if (value == null) {
+      return customMessage ?? 'حقل إجباري';
+    }
+    if (value is List && value.isEmpty) {
+      return customMessage ?? 'حقل إجباري';
+    }
+    return null;
+  }
 }
