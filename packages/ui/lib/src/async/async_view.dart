@@ -19,7 +19,7 @@ class AsyncView<T> extends StatelessWidget {
     required this.onError,
     required this.onEmpty,
     required this.onSuccess,
-    this.error,
+    required this.error,
   });
 
   @override
