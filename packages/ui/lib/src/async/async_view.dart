@@ -37,7 +37,7 @@ class AsyncView<T> extends StatelessWidget {
             : Center(child: Text(resolvedError.toString()));
 
       case LoadStatus.success:
-        if (data == null) {
+        if (data == null || (data is Iterable && (data as Iterable).isEmpty)) {
           return onEmpty != null
               ? onEmpty!()
               : const Center(child: Text('No data available'));
