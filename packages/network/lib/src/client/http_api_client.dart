@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
 import 'package:app_platform_core/core.dart';
@@ -40,6 +41,35 @@ class HttpApiClient implements ApiClient {
         uri: Uri.parse('$baseUrl$path').replace(queryParameters: query),
         headers: headers,
         parser: parser);
+  }
+
+  @override
+  Future<Result<Uint8List>> getBytes(
+    String path, {
+    Map<String, String>? headers,
+  }) async {
+    try {
+      final token = await tokenProvider.getToken();
+      final uri = Uri.parse('$baseUrl$path');
+      final finalHeaders = <String, String>{
+        'Accept': 'application/octet-stream',
+        if (token != null) 'Authorization': 'Bearer $token',
+        ...defaultHeaders,
+        if (headers != null) ...headers,
+      };
+      final response =
+          await client.get(uri, headers: finalHeaders).timeout(timeout);
+      if (response.statusCode == 200) {
+        return Success(response.bodyBytes);
+      }
+      return Failure(ServerError(response.statusCode, response.body));
+    } on SocketException {
+      return Failure(const NoInternetError());
+    } on TimeoutException {
+      return Failure(const TimeoutError());
+    } catch (e) {
+      return Failure(UnknownError(e.toString()));
+    }
   }
 
   @override
