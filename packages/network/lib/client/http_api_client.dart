@@ -161,7 +161,7 @@ class HttpApiClient implements ApiClient {
 
     // سنستخدم UnknownError لتمرير الـ body إذا كانت الكلاسات الأخرى لا تقبله
     // أو نمرر الـ body لـ ValidationError والـ ServerError
-    return Failure(ServerError('$statusCode\n$responseBody'));
+    return Failure(ServerError(statusCode, responseBody));
     // switch (statusCode) {
     //   case 401:
     //     return Failure(

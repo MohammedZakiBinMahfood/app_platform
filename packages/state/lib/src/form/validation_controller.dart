@@ -63,7 +63,7 @@ abstract class ValidationController<K extends Enum>
 
     state = state.updateField(
       field,
-      current.copyWith(error: true),
+      current.copyWith(error: null),
     );
   }
 

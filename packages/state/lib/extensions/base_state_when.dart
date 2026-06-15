@@ -48,7 +48,7 @@ extension BaseStateWhen<T> on BaseState<T> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(error.errorMessage.toString()),
+          Text(error.message.toString()),
           const SizedBox(height: 8),
           if (onErrorAction != null)
             IconButton(

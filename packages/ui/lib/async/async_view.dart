@@ -67,7 +67,7 @@ class AsyncView<T> extends StatelessWidget {
             // ),
             // const SizedBox(height: 8),
             Text(
-              error.errorMessage.toString(),
+              error.message.toString(),
               style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.center,
             ),
