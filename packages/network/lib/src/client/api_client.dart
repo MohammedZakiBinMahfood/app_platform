@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:app_platform_core/core.dart';
 
 abstract class ApiClient {
@@ -7,6 +9,11 @@ abstract class ApiClient {
         Map<String, String>? headers,
         required JsonParser<T> parser,
       });
+
+  Future<Result<Uint8List>> getBytes(
+    String path, {
+    Map<String, String>? headers,
+  });
 
   Future<Result<T>> post<T>(
       String path, {

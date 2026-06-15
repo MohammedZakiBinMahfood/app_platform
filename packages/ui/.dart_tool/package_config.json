@@ -9,7 +9,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/characters-1.4.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/characters-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -21,27 +21,27 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/hassan/Development/flutter/packages/flutter",
+      "rootUri": "file:///Users/hassan/develop/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.10"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.5"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/meta-1.17.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/meta-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/hassan/Development/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/hassan/develop/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.10"
     },
     {
       "name": "vector_math",
@@ -57,8 +57,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.10.3",
-  "flutterRoot": "file:///Users/hassan/Development/flutter",
-  "flutterVersion": "3.38.4",
+  "generatorVersion": "3.12.0",
+  "flutterRoot": "file:///Users/hassan/develop/flutter",
+  "flutterVersion": "3.44.0",
   "pubCache": "file:///Users/hassan/.pub-cache"
 }
