@@ -39,7 +39,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/characters-1.4.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/characters-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -57,7 +57,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/collection-1.19.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/collection-1.19.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -93,13 +93,13 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/mohammedzaki/develop/flutter/packages/flutter",
+      "rootUri": "file:///Users/mohammedzaki/Development/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
     {
       "name": "flutter_riverpod",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/flutter_riverpod-3.3.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/flutter_riverpod-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -171,13 +171,13 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/meta-1.18.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/meta-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -201,7 +201,7 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/path-1.9.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -219,7 +219,7 @@
     },
     {
       "name": "riverpod",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/riverpod-3.2.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/riverpod-3.2.1",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -249,37 +249,37 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/mohammedzaki/develop/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/hassan/develop/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     },
     {
       "name": "source_map_stack_trace",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.2",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "source_maps",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/source_maps-0.10.13",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/source_maps-0.10.13",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/source_span-1.10.2",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/source_span-1.10.2",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/stack_trace-1.12.1",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/stack_trace-1.12.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "state_notifier",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/state_notifier-1.0.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/state_notifier-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -327,7 +327,7 @@
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/mohammedzaki/.pub-cache/hosted/pub.dev/vector_math-2.2.0",
+      "rootUri": "file:///Users/hassan/.pub-cache/hosted/pub.dev/vector_math-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
@@ -381,8 +381,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.12.2",
-  "flutterRoot": "file:///Users/mohammedzaki/develop/flutter",
-  "flutterVersion": "3.44.2",
-  "pubCache": "file:///Users/mohammedzaki/.pub-cache"
+  "generatorVersion": "3.12.0",
+  "flutterRoot": "file:///Users/hassan/develop/flutter",
+  "flutterVersion": "3.44.0",
+  "pubCache": "file:///Users/hassan/.pub-cache"
 }

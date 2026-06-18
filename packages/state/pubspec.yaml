@@ -1,11 +1,14 @@
 name: app_platform_state
+description: State management with BaseState, ActionStore, form validation, and action listeners for Flutter.
 version: 1.0.0
+publish_to: none
+
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ^3.0.0
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^3.3.1
+  flutter_riverpod: ^2.0.0
   app_platform_core:
     path: ../core

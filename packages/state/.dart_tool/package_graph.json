@@ -8,7 +8,6 @@
       "version": "1.0.0",
       "dependencies": [
         "app_platform_core",
-        "flutter",
         "flutter_riverpod"
       ],
       "devDependencies": []
@@ -27,6 +26,16 @@
         "flutter_test",
         "meta",
         "riverpod",
+        "state_notifier"
+      ]
+    },
+    {
+      "name": "riverpod",
+      "version": "2.6.1",
+      "dependencies": [
+        "collection",
+        "meta",
+        "stack_trace",
         "state_notifier"
       ]
     },
@@ -51,14 +60,12 @@
     },
     {
       "name": "riverpod",
-      "version": "3.2.1",
+      "version": "2.6.1",
       "dependencies": [
-        "async",
-        "clock",
         "collection",
         "meta",
-        "state_notifier",
-        "test"
+        "stack_trace",
+        "state_notifier"
       ]
     },
     {
@@ -90,13 +97,13 @@
       "dependencies": []
     },
     {
-      "name": "sky_engine",
-      "version": "0.0.0",
+      "name": "vector_math",
+      "version": "2.2.0",
       "dependencies": []
     },
     {
-      "name": "vector_math",
-      "version": "2.2.0",
+      "name": "sky_engine",
+      "version": "0.0.0",
       "dependencies": []
     },
     {
@@ -146,32 +153,6 @@
       "name": "clock",
       "version": "1.1.2",
       "dependencies": []
-    },
-    {
-      "name": "async",
-      "version": "2.13.1",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
-    },
-    {
-      "name": "stream_channel",
-      "version": "2.1.4",
-      "dependencies": [
-        "async"
-      ]
-    },
-    {
-      "name": "leak_tracker_flutter_testing",
-      "version": "3.0.10",
-      "dependencies": [
-        "flutter",
-        "leak_tracker",
-        "leak_tracker_testing",
-        "matcher",
-        "meta"
-      ]
     },
     {
       "name": "stack_trace",

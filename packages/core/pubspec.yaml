@@ -1,4 +1,7 @@
 name: app_platform_core
+description: Core types, Result pattern, error models, pagination utilities for App Platform.
 version: 1.0.0
+publish_to: none
+
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ^3.0.0

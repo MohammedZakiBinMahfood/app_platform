@@ -1,5 +1,20 @@
 library app_platform_core;
 
+export 'result/result.dart';
+export 'errors/app_error.dart';
+export 'errors/validation_error_data.dart';
+export 'errors/validation_error_data_source.dart';
+export 'errors/common_errors.dart';
+export 'status/load_status.dart';
+export 'logger/logger.dart';
+export 'errors/network_errors.dart';
+export 'network/json_parser.dart';
+export 'pagination/pagination.dart';
+export 'pagination/paginated.dart';
+export 'pagination/pagination_mapper.dart';
+export 'query/query_filters.dart';
+export 'status/status.dart';
+export 'result/extensions.dart';
 export 'src/result/result.dart';
 export 'src/errors/app_error.dart';
 export 'src/errors/common_errors.dart';
