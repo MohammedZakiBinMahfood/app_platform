@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:app_platform_network/token/token_provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:app_platform_core/core.dart';
 
-import '../token/token_provider.dart';
 import 'upload_client.dart';
 
 class ProgressMultipartRequest extends http.MultipartRequest {
@@ -127,20 +127,15 @@ class HttpUploadClient implements UploadClient {
 
     switch (statusCode) {
       case 401:
-        return Failure(const UnauthorizedError());
+        return Failure(UnauthorizedError([]));
       case 403:
-        return Failure(const ForbiddenError());
+        return Failure(ForbiddenError([]));
       case 404:
         return Failure(const NotFoundError());
       case 422:
-        dynamic decodedBody;
-        try {
-          decodedBody = jsonDecode(response.body);
-        } catch (_) {}
-        return Failure(ValidationError(response.body,
-            fields: decodedBody is Map ? decodedBody['errors'] : null));
+        return Failure(ServerError(response.body));
       default:
-        return Failure(ServerError(statusCode, response.body));
+        return Failure(ServerError(response.body));
     }
   }
 }

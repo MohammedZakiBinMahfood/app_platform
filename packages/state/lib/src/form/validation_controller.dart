@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:app_platform_state/src/form/validator_type.dart';
+import '../../form/validator_type.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'form_validation_state.dart';
-import 'validation_context.dart';
+import '../../form/validation_context.dart';
 
 abstract class ValidationController<K extends Enum>
     extends Notifier<FormValidationState<K>> {

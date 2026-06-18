@@ -1,4 +1,4 @@
-import '../state.dart';
+import 'validation_field_state.dart';
 
 class FormValidationState<K extends Enum> {
   final Map<K, ValidationFieldState> fields;

@@ -1,5 +1,6 @@
-import '../errors/common_errors.dart';
-import '../result/result.dart';
+
+import '../../errors/common_errors.dart';
+import '../../result/result.dart';
 
 int _getCode(Map<String, dynamic> json) {
   final code = json['code'];

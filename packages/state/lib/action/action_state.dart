@@ -1,5 +1,6 @@
 
 import 'package:app_platform_core/core.dart';
+import 'package:app_platform_core/errors/app_error.dart';
 import 'action_status.dart';
 
 class ActionState {
